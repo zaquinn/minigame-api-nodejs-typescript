@@ -9,12 +9,6 @@ app.use(express.json());
 
 appRoutes(app);
 
-app.get("/", (req: Request, res: Response) => {
-  res.status(200).json({
-    message: "Hello World",
-  });
-});
-
 app.use(errorMiddleware);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
