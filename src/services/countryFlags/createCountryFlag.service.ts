@@ -1,5 +1,4 @@
 import { AppDataSource } from "../../data-source";
-import { AppError } from "../../errors/appError";
 import { CountryFlag } from "../../entities/countryFlag.entity";
 import { ICountryFlagCreate } from "../../interfaces/countryFlags";
 

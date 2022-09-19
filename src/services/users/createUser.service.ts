@@ -35,7 +35,17 @@ const createUserService = async ({
   userRepository.create(user);
   await userRepository.save(user);
 
-  return user;
+  const userReturn: IUserReturn = {
+    id: user.id,
+    username: user.username,
+    avatar: user.avatar,
+    countryFlag: user.countryFlag,
+    nationality: user.nationality,
+    created_at: user.created_at,
+    updated_at: user.updated_at,
+  };
+
+  return userReturn;
 };
 
 export default createUserService;
