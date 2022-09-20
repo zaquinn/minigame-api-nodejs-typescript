@@ -196,6 +196,69 @@ Content-type: application/json
 ]
 ```
 ---
+
+### 1.4. Atualizar usuário
+
+[ Voltar para Endpoints ](#3-endpoints)
+
+Atualiza um usuário registrado.
+
+### Exemplo de Request:
+```
+PATCH /user/update
+Host: https://backend-minigame-deploy.herokuapp.com
+Authorization: Bearer Token
+Content-type: application/json
+```
+
+### Corpo da Requisição:
+```json
+{
+	"username": "Carlote",
+	"nationality": "United States"
+}
+```
+
+### Exemplo de Response:
+```
+200 Success
+```
+
+```json
+{
+	"id": 7,
+	"username": "Carlote",
+	"avatar": "https://i.postimg.cc/Vs4WnmYW/avatarimg.png",
+	"countryFlag": {
+		"id": 2,
+		"country": "United States",
+		"flag": "https://static.mundoeducacao.uol.com.br/mundoeducacao/2022/05/bandeira-estados-unidos.jpg"
+	},
+	"nationality": "United States",
+	"created_at": "2022-09-19T21:34:12.263Z",
+	"updated_at": "2022-09-19T21:34:12.263Z"
+}
+```
+---
+### 1.5. Deletar usuário
+
+[ Voltar para Endpoints ](#3-endpoints)
+
+Deleta um usuário registrado.
+
+### Exemplo de Request:
+```
+DELETE /user/delete
+Host: https://backend-minigame-deploy.herokuapp.com
+Authorization: Bearer Token
+```
+
+### Exemplo de Response:
+```
+204 No Content
+```
+
+---
 ## 2. Flags
 [ Voltar para Endpoints ](#3-endpoints)
 
